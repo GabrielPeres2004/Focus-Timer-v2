@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    font-family: "Roboto Mono", monospace;
+
+    --text-color:hsl(240, 6%, 21%);
+    --bg-color:hsl(240, 6%, 21%);
+
+    --bg-btn:hsla(240, 9%, 89%, 1);
+    --bg-btn-click: hsla(194, 97%, 31%, 1);
+}
+
+body{
+    padding: 12.6rem;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.flex{
+    display: flex;
+}
+
+#focus-timer{
+    align-items: center;
+    justify-content: space-around;
+}
+
+span{
+    color: var(--text-color);
+    text-align: center;
+    font-size: 12.6rem;
+    font-weight: 500;
+}
+
+
+#controls button{
+    background: transparent;
+    color: var(--text-color);
+
+    font-size: 6rem;
+    padding: 1.6rem;
+
+    border-radius: 50%;
+    border: none;
+
+    gap: 1rem;
+
+    cursor: pointer;
+}
+
+.running .ph-play-circle,
+.running .ph-plus-circle,
+.running .ph-minus-circle,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle{
+    display: none;
+}
+
+.audio-controls{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2.6rem;
+}
+
+.audio-controls button{
+    background: var(--bg-btn);
+    border-radius: 1.2rem;
+    border: none;
+    
+    font-size: 6rem;
+    padding: 3.8rem;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.audio-controls .button-click{
+    transform: scale(1.1);
+    background: var(--bg-btn-click);
+} 
+
+.audio-controls button i {
+    pointer-events: none;
+}
+
